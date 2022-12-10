@@ -30,9 +30,7 @@ public class UserDaoImp implements UserDao {
     @Override
     public User findByCarAttributes(String model, int series) {
         User resultUser = null;
-        //String hql = "from User u where u.car.model like :model and u.car.series like :series";
         String hql = "from User u where u.privateCar.model like :model and u.privateCar.series like :series";
-        //String hql = "from User u left join Car c where c.model like :model and c.series like :series";
         Query query = sessionFactory.getCurrentSession()
                 .createQuery(hql)
                 .setParameter("model", model)
