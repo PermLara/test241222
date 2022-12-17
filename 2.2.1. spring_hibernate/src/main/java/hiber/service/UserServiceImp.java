@@ -13,8 +13,6 @@ public class UserServiceImp implements UserService {
 
     @Autowired
     private UserDao userDao;
-    private String model;
-    private int series;
 
     @Transactional
     @Override
