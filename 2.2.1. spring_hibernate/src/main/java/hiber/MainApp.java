@@ -17,8 +17,8 @@ public class MainApp {
 
         UserService userService = context.getBean(UserService.class);
 
-        for (int i = 14; i <= 14; i++) {
-            newUser = new User("User" + i, "Lastname" + i, "user" + i + "1@mail.ru");
+        for (int i = 15; i <= 15; i++) {
+            newUser = new User("User" + i, "Lastname" + i, "user" + i + "@mail.ru");
             newUser.setPrivateCar(new Car("Model" + i, i * 1000 + i * 10 + i));
             userService.add(newUser);
         }
