@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cars</title>
+</head>
+<body>
+<div>
+    <h2>Cars/Users are here:</h2>
+</div>
+
+<div>
+    <table>
+        <thead>
+        <tr>
+            <th> name</th>
+            <th> last_name</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:if="${listUsers.empty}">
+            <td colspan="2"> No Users Available</td>
+        </tr>
+        <tr th:each="u : ${listUsers}">
+            <td><span th:text="${u.name}"> name </span></td>
+            <td><span th:text="${u.last_name}"> last_name </span></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

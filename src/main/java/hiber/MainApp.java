@@ -6,18 +6,17 @@ import hiber.model.User;
 import hiber.service.UserService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import java.sql.SQLException;
 import java.util.List;
 
 public class MainApp {
-    public static void main(String[] args) throws SQLException {
-        User newUser;
+    public static void main(String[] args) {
+
         AnnotationConfigApplicationContext context =
                 new AnnotationConfigApplicationContext(AppConfig.class);
 
         UserService userService = context.getBean(UserService.class);
-
-        for (int i = 15; i <= 15; i++) {
+        User newUser;
+        for (int i = 17; i <= 17; i++) {
             newUser = new User("User" + i, "Lastname" + i, "user" + i + "@mail.ru");
             newUser.setPrivateCar(new Car("Model" + i, i * 1000 + i * 10 + i));
             userService.add(newUser);
